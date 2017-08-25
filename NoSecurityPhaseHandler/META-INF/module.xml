@@ -1,0 +1,8 @@
+<module name="nosecurity" class="org.wso2.nosecurity.Rampart">
+	<Description>This modules intercepts the message before reaching rampart handlers and skip security being processed</Description>
+	<InFlow>
+		<handler name="SecurityInHandler" class="org.wso2.nosecurity.handler.NoSecurityHandler">
+			<order phase="NoSecurity" />
+		</handler>
+	</InFlow>	
+</module>
