@@ -34,11 +34,13 @@ public class NoSecurityHandler extends AbstractHandler {
         
     public InvocationResponse invoke(MessageContext messageContext) throws AxisFault {
 
-//    	if(!messageContext.isEngaged(NO_SECURITY)){
-//            return InvocationResponse.CONTINUE;
-//        }
-//
-//        System.out.println(" No Security handler is hit......!!!");
+    	if(!messageContext.isEngaged(NO_SECURITY)){
+            if(!Boolean.parseBoolean((String)messageContext.getProperty("NoSecurityProperty"))){
+                return InvocationResponse.CONTINUE;
+            }
+        }
+
+    	System.out.println(" No Security handler is hit......!!!");
 
         if(!messageContext.isEngaged(RAMPART)){
             return InvocationResponse.CONTINUE;
