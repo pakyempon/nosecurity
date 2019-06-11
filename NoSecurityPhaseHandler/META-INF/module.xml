@@ -4,5 +4,5 @@
 		<handler name="SecurityInHandler" class="org.wso2.nosecurity.handler.NoSecurityHandler">
 			<order phase="NoSecurity" />
 		</handler>
-	</InFlow>	
+	</InFlow>		
 </module>

@@ -27,7 +27,7 @@ import java.io.InputStream;
 /**
  * This is no Security handler for Axis2, Carbon based products that uses rampart as security module
  */
-public class NoSecurityHandler extends AbstractHandler {
+public class NoSecurityHandler extends AbstractHandler implements Handler {
 
 	private static final String RAMPART = "rampart";
     private static final String NO_SECURITY = "nosecurity";
